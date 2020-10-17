@@ -23,7 +23,7 @@ class Repository(private val productsDAO: PhoneDAO, val context:Context) {
 
 
     var networkError = MutableLiveData<String>()
-
+    var itemselected = 0
 
     fun remoteData(){
         retrofitC.showPhones().enqueue(object : Callback<List<CellPhone>>{

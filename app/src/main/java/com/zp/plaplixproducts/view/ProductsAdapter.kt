@@ -1,19 +1,27 @@
 package com.zp.plaplixproducts.view
 
+import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.zp.plaplixproducts.R
 import com.zp.plaplixproducts.model.CellPhone
 
-class ProductsAdapter(var mDATAset: List<CellPhone>):RecyclerView.Adapter<ProductsAdapter.PhonesHolder>(){
+class ProductsAdapter(private var mDATAset: List<CellPhone>):RecyclerView.Adapter<ProductsAdapter.PhonesHolder>(){
+
+
+    fun updateDataset(phoneList:List<CellPhone>){
+        mDATAset=phoneList
+        notifyDataSetChanged()
+    }
 
     inner class PhonesHolder(itemView: View): RecyclerView.ViewHolder(itemView){
-        val nameText = itemView.phoneModel
-        val appearencia = itemView.price
-        val pngPhoto = itemView.ilustration
+        val name = itemView
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PhonesHolder {
+        val view = LayoutInflater.from(parent.context).inflate(R.layout.items_products_list,parent,false)
+    return PhonesHolder(view)
     }
 
     override fun onBindViewHolder(holder: PhonesHolder, position: Int) {
@@ -21,6 +29,6 @@ class ProductsAdapter(var mDATAset: List<CellPhone>):RecyclerView.Adapter<Produc
     }
 
     override fun getItemCount(): Int {
-
+        return mDATAset.size
     }
 }
