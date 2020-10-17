@@ -1,12 +1,11 @@
-package com.zp.plaplixproducts.model.remote
+package com.zp.plaplixproducts.model
 
 import android.content.Context
-import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
-import com.zp.plaplixproducts.model.CellPhone
 import com.zp.plaplixproducts.model.local.LocalDDBB
 import com.zp.plaplixproducts.model.local.PhoneDAO
 import com.zp.plaplixproducts.model.local.ProductsEntity
+import com.zp.plaplixproducts.model.remote.Rclient
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch

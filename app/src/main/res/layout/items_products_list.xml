@@ -6,35 +6,36 @@
     android:layout_height="match_parent">
 
     <ImageView
-        android:id="@+id/ilustration"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="55dp"
-        android:layout_marginEnd="120dp"
+        android:id="@+id/telefono"
+        android:layout_width="0dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="228dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/price"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintStart_toEndOf="@+id/modelo"
+        app:layout_constraintTop_toTopOf="parent"
+        android:contentDescription="@string/a_mobile_phone" />
 
     <TextView
-        android:id="@+id/phoneModel"
+        android:id="@+id/modelo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="53dp"
-        android:layout_marginTop="55dp"
-        android:layout_marginEnd="181dp"
-        app:layout_constraintEnd_toStartOf="@+id/ilustration"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="62dp"
+        app:layout_constraintEnd_toStartOf="@+id/telefono"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/precio" />
 
     <TextView
-        android:id="@+id/price"
+        android:id="@+id/precio"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="103dp"
-        android:layout_marginTop="19dp"
-        android:layout_marginEnd="131dp"
-        app:layout_constraintEnd_toStartOf="@+id/ilustration"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="70dp"
+        android:layout_marginEnd="62dp"
+        app:layout_constraintEnd_toStartOf="@+id/telefono"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/phoneModel" />
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
